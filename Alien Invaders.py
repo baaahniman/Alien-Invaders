@@ -2,14 +2,7 @@ import turtle
 import os
 import math
 import random
-import pymysql as pm
 
-conn=pm.connect(host="Localhost", user="root", passwd="bahniman31")
-cur=conn.cursor()
-
-cur.execute("create database if not exist game")
-cur.execute("use game")
-cur.execute("create table SCORES (Score INT(5)")
 
 wn=turtle.Screen()
 wn.bgcolor("black")
@@ -37,7 +30,7 @@ score_pen.setposition(-290,280)
 scorestring="Score:%s"%score
 score_pen.write(scorestring, False, align="left",font=("Arial", 14, "normal"))
 score_pen.hideturtle()
-qry="insert into SCORES values(%s)
+
 
 player=turtle.Turtle()
 player.color("blue")
